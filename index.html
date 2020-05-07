@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<title>닮은꼴 테스트</title>
+
+	<link rel="stylesheet" href="style.css">
+	
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5eb44e7c3414f1ce"></script>
+
+	
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light  nav-distance">
+		<a class="navbar-brand" href="#">캐릭터 테스트</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">닮은꼴 테스트
+						<span class="sr-only">(current)</span>
+					</a>
+				</li>
+				<!-- <li class="nav-item">
+					<a class="nav-link" href="#">Features</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Pricing</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+				</li> -->
+			</ul>
+		</div>
+	</nav>
+	<section class="setcion">
+		<h1 class="title">(인공지능) 원피스 캐릭터 닮은꼴 테스트 </h1>
+		<h2 class="subtitle">어떤 캐릭터와 닮았을까?</h2>
+	</section>
+	<section class="youtube">
+		<div class="container mt-5 youtube-cover d-flex flex-row-reverse">
+			<a href="" class="youtube-link">By hikki</a>
+			<img src="" alt="" class="youtube-icon">
+		</div>
+	</section>
+
+	<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<div class="container file-upload">
+
+		<div class="image-upload-wrap" style="width:70%;
+			margin:0 auto;">
+			<input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+			<div class="drag-text">
+				<img src="img/icons8-upload-26.png" class="mt-5 pt-5 upload">
+				<h3 class="mb-5 pb-5 pt-4 upload-text">얼굴사진을 올려놓거나 클릭하여 업로드 해주세요</h3>
+			</div>
+		</div>
+		<div class="file-upload-content">
+			<img class="file-upload-image" id="face-image" src="#" alt="your image" />
+			
+			<div id="loading" class="animated bounce">
+				<div class="spinner-border" role="status">
+					<span class="sr-only">Loading...</span>
+				</div>
+				<p class="text-center">AI가 당신의 닮은꼴을 분석중입니다.</p>
+			</div>
+			
+			<p class="result-message"></p>
+			<div id="label-container" class="d-flex flex-column justify-content-around"></div>
+            <div id="addThis" class="addthis_inline_share_toolbox_6lz1"></div>
+
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox"></div>
+            
+            <div class="pt-3 image-title-wrap">
+                <button type="button p-2" class="try-again-btn" onclick="window.location.reload();">
+                    <span class="try-again-text">다른 사진으로 재시도</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div id="webcam-container"></div>
+
+	<div id="disqus_thread"></div>
+	<script>
+		/**
+		 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+		 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+		/*
+		var disqus_config = function () {
+		this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		};
+		*/
+		(function() { // DON'T EDIT BELOW THIS LINE
+			var d = document,
+				s = d.createElement('script');
+			s.src = 'https://hikki-1.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the
+		<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+	</noscript>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('.image-upload-wrap').hide();
+                    $('#loading').show();
+                    $('.file-upload-image').attr('src', e.target.result);
+                    $('.file-upload-content').show();
+                    $('.image-title').html(input.files[0].name);
+                };
+                reader.readAsDataURL(input.files[0]);
+                init().then(function() {
+                    console.log("hello");
+                    predict();
+                    $('#loading').hide();
+                });
+            } else {
+                removeUpload();
+            }
+        }
+
+        function removeUpload() {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').bind('dragover', function() {
+            $('.image-upload-wrap').addClass('image-dropping');
+        });
+        $('.image-upload-wrap').bind('dragleave', function() {
+            $('.image-upload-wrap').removeClass('image-dropping');
+        });
+    </script>
+	<script type="text/javascript">
+		// More API functions here:
+		// https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+		// the link to your model provided by Teachable Machine export panel
+		const URL = "https://teachablemachine.withgoogle.com/models/BnAKNO8oZ/";
+		let model, webcam, labelContainer, maxPredictions;
+		// Load the image model and setup the webcam
+		async function init() {
+			const modelURL = URL + "model.json";
+			const metadataURL = URL + "metadata.json";
+			// load the model and metadata
+			// Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+			// or files from your local hard drive
+			// Note: the pose library adds "tmImage" object to your window (window.tmImage)
+			model = await tmImage.load(modelURL, metadataURL);
+			maxPredictions = model.getTotalClasses();
+			// append elements to the DOM
+			labelContainer = document.getElementById("label-container");
+			for (let i = 0; i < maxPredictions; i++) { // and class labels
+				labelContainer.appendChild(document.createElement("div"));
+			}
+		}
+		// run the webcam image through the image model
+		async function predict() {
+			// predict can take in an image, video or canvas html element
+			var image = document.getElementById("face-image")
+			const prediction = await model.predict(image, false);
+			prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+			console.log(prediction[0].className);
+			var resultTitle, resultExplain, resultCeleb;
+			switch (prediction[0].className) {
+				case "rupy":
+					resultTitle = "몽키 D 루피 "
+					resultExplain = "밀짚모자 일당의 선장 / 생일 : 5월 5일"
+					resultCeleb = "현상금 : 15억베리 "
+					break;
+				case "zoro":
+					resultTitle = "롤로노아 조로 "
+					resultExplain = "밀짚모자 일당의 부선장 / 생일 : 11월 11일"
+					resultCeleb = "현상금 : 3억 2천만베리 "
+					break;
+				case "usop":
+					resultTitle = "저격왕 우솝"
+					resultExplain = "밀짚모자 일당의 저격수 / 생일 : 4월 1일"
+					resultCeleb = "현상금 : 2억베리 "
+					break;
+				case "nami":
+					resultTitle = "도둑고양이 나미 "
+					resultExplain = "밀짚모자 일당의 향해사 / 생일 : 7월 3일"
+					resultCeleb = "현상금 : 6천 6백만베리 "
+					break;
+				case "chopa":
+					resultTitle = "토니토니 쵸파"
+					resultExplain = "밀짚모자 일당의 선의 / 생일 : 12월 24일"
+					resultCeleb = "현상금 : 100 베리 "
+					break;
+				case "sanji":
+					resultTitle = "빈스모크 상디 "
+					resultExplain = "밀짚모자 일당의 요리사 / 생일 : 3월 2일"
+					resultCeleb = "현상금 : 3억 3천만베리 "
+					break;
+				case "robin":
+					resultTitle = "악마의 아이 로빈 "
+					resultExplain = "밀짚모자 일당의 고고학자 /  생일 : 2월 6일"
+					resultCeleb = "현상금 : 1억 3천만베리 "
+					break;
+				case "franky":
+					resultTitle = "커티 프람(프랑키) "
+					resultExplain = "밀짚모자 일당의 조선공 / 생일 : 3월 9일"
+					resultCeleb = "현상금 : 9천 4백만베리 "
+					break;
+				case "brook":
+					resultTitle = "소울킹 브룩 "
+					resultExplain = "밀짚모자 일당의 음악가 /  생일 : 4월 3일"
+					resultCeleb = "현상금 : 8천 3백만베리 "
+					break;
+				case "zinbe":
+					resultTitle = "바다의 협객 징베 "
+					resultExplain = "밀짚모자 일당의 조타수 / 생일 : 4월 2일"
+					resultCeleb = "현상금 : 4억 3천 800만베리 "
+					break;
+				default:
+					resultTitle = "알수없음"
+					resultExplain = ""
+					resultCeleb = " "
+			}
+			var title = "<div class='" + prediction[0].className + "-animal-title'>" + resultTitle + "</div>"
+			var explain = "<div class='animal-explain pt-2'>" + resultExplain + "</div>"
+			var celeb = "<div class='" + prediction[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+			$('.result-message').html(title + explain + celeb);
+			var barWidth;
+			for (let i = 0; i < 3; i++) {
+				if (prediction[i].probability.toFixed(2) > 0.1) {
+					barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+				} else if (prediction[i].probability.toFixed(2) >= 0.01) {
+					barWidth = "4%"
+				} else {
+					barWidth = "2%"
+				}
+				var labelTitle;
+				switch (prediction[i].className) {
+					case "rupy":
+						labelTitle = "몽키 D 루피 "
+						break;
+					case "zoro":
+						labelTitle = "롤로노아 조로"
+						break;
+					case "usop":
+						labelTitle = "저격왕 우솝"
+						break;
+					case "sanji":
+						labelTitle = "빈스모크 상디"
+						break;
+					case "nami":
+						labelTitle = "도둑고양이 나미"
+						break;
+					case "chopa":
+						labelTitle = "토니토니 쵸파"
+						break;
+					case "robin":
+						labelTitle = "악마의 아이 로빈"
+						break;
+					case "franky":
+						labelTitle = "커티 프람(프랑키)"
+						break;
+					case "brook":
+						labelTitle = "소울킹 브룩"
+						break;
+					case "zinbe":
+						labelTitle = "바다의 협객 징베"
+						break;
+					default:
+						labelTitle = "알수없음"
+				}
+				var label = "<div class='animal-label d-flex align-items-center'>" + labelTitle + "</div>"
+				var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+				labelContainer.childNodes[i].innerHTML = label + bar;
+			}
+		}
+	</script>
+
+</body>
+<!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+<a target="_blank" href="https://icons8.com/icons/set/upload">Upload icon</a> icon by
+<a target="_blank" href="https://icons8.com">Icons8</a>
+-->
+    <footer class="footer pt-5 container d-flex justify-content-center">
+        <div>
+            <p>&copy; hikki 2020. All Rights Reserved. </p>
+			<p>
+			출처 : 조코딩 (유튜브) , 동물상 테스트
+			</p>
+        </div>
+    </footer>
+</html>
