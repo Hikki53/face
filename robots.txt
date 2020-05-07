@@ -1,0 +1,3 @@
+User-agent: *
+Allow:/
+Sitemap:https://hikki.netlify.app/sitemap.xml
