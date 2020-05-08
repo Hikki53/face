@@ -60,7 +60,7 @@ body {
 
 .image-upload-wrap {
 
-	width:65%;
+	width:80%;
 	margin: 0 auto;
   border: 4px dashed #1FB264;
   position: relative;
@@ -524,8 +524,7 @@ body {
 	margin: 0 auto;
 }
 .ad-banner2{
-	float:left;
-	width:1%;
-	height:600px;
+	width:720px;
+	height:90px;
 	margin: 0 auto;
 }
