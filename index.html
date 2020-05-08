@@ -2,6 +2,17 @@
 <html>
 
 <head>
+<script type="text/javascript">
+
+function windowopenPopup(){
+
+	window.open('test.html', 'window팝업', 'width=260, height=260 left=600, top=400, menubar=no, status=no, toolbar=no');
+
+}
+
+</script>
+
+
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="canonical" href="https://hikki.netlify.app/indedx.html">
@@ -29,7 +40,8 @@
 	
 </head>
 
-<body onload="window.open('test.html','Onepiece','width=300px, height=300px, left=400px, top=400px, toolbar=0, status=yes, menubars=0, scrollbars=0, resizable=0, location=0, directories=0')">
+<body onload= "windowopenPopup();" >
+
 	<nav class="navbar navbar-expand-lg navbar-light  nav-distance">
 		<a class="navbar-brand" href="#">캐릭터 테스트</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,7 +82,7 @@
 		<div class="ad-banner2">
 <ins class="kakao_ad_area" style="display:none;" 
  data-ad-unit    = "DAN-ubjlhaywoh86" 
- data-ad-width   = "160" 
+ 
  data-ad-height  = "600"></ins> 
 <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
 		</div>
@@ -111,6 +123,7 @@
 	<div id="webcam-container"></div>
 
 	<div id="disqus_thread"></div>
+
 	<script>
 		/**
 		 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
